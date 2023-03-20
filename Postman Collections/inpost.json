@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "INPOST get all machine",
+			"name": "INPOST get all machine from github",
 			"id": "064fe1bc-35d4-420d-99f3-40b098470d70",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
