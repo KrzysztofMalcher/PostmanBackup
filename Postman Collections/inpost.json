@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "INPOST get all machine from github",
+			"name": "INPOST get all machine",
 			"id": "064fe1bc-35d4-420d-99f3-40b098470d70",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -37,7 +37,7 @@
 			"response": []
 		},
 		{
-			"name": "INPOST get all machines github",
+			"name": "INPOST get all machines github second chang",
 			"id": "58a6413a-c2e2-46ae-9543-6022c670aa0f",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
