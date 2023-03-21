@@ -1,0 +1,1104 @@
+{
+	"info": {
+		"_postman_id": "ea317e8c-ac5e-4eda-9989-2e518b4c7f63",
+		"name": "ShipEngine Rendering Api",
+		"description": "This is ShipEngine Rendering Api\n\nVersion history:\n  * 1.16.3: Initial version with Models from Shipping API (1.16.3)\n\n\nContact Support:\n Email: ninja@auctane.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/v1",
+			"item": [
+				{
+					"name": "templates",
+					"item": [
+						{
+							"name": "Render preview of documents from a template",
+							"_postman_id": "1005972b-cd78-42cb-b206-014eb67c7592",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"template\": \"nulla\",\n  \"dataSet\": \"id esse commodo\",\n  \"packageIndex\": 51744396,\n  \"format\": 0,\n  \"dpi\": \"203\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/api/v1/templates/preview"
+							},
+							"response": [
+								{
+									"id": "144f9c5f-133a-48bc-ba8e-8150416e4a28",
+									"name": "Method Not Allowed",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"template\": \"nulla\",\n  \"dataSet\": \"id esse commodo\",\n  \"packageIndex\": 51744396,\n  \"format\": 0,\n  \"dpi\": \"203\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/v1/templates/preview"
+									},
+									"status": "Method Not Allowed",
+									"code": 405,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "27180310-d822-43c1-9e76-2b1c60d6730a",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"template\": \"nulla\",\n  \"dataSet\": \"id esse commodo\",\n  \"packageIndex\": 51744396,\n  \"format\": 0,\n  \"dpi\": \"203\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/v1/templates/preview"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "98ff53df-cfe4-44ed-b443-faf89f2d8c4d",
+									"name": "Unsupported Media Type",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"template\": \"nulla\",\n  \"dataSet\": \"id esse commodo\",\n  \"packageIndex\": 51744396,\n  \"format\": 0,\n  \"dpi\": \"203\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/v1/templates/preview"
+									},
+									"status": "Unsupported Media Type",
+									"code": 415,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "bbcc4980-1d76-4201-843d-b188a40d0173",
+									"name": "Documents preview successfully rendered",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"template\": \"nulla\",\n  \"dataSet\": \"id esse commodo\",\n  \"packageIndex\": 51744396,\n  \"format\": 0,\n  \"dpi\": \"203\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/v1/templates/preview"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"documents\": [\n    {\n      \"data\": \"occaecat id\",\n      \"dpi\": \"203\",\n      \"format\": 0,\n      \"type\": [\n        \"label\",\n        \"label\"\n      ],\n      \"layout\": \"4x6\"\n    },\n    {\n      \"data\": \"id magna veniam\",\n      \"dpi\": \"203\",\n      \"format\": 0,\n      \"type\": [\n        \"label\",\n        \"label\"\n      ],\n      \"layout\": \"4x6\"\n    }\n  ]\n}"
+								},
+								{
+									"id": "cd8000cb-5b16-40d9-ab22-23f8a63942f9",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"template\": \"nulla\",\n  \"dataSet\": \"id esse commodo\",\n  \"packageIndex\": 51744396,\n  \"format\": 0,\n  \"dpi\": \"203\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/v1/templates/preview"
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Render samples of documents from a template",
+							"_postman_id": "e80c1c87-8bfa-4c4a-b729-fb417b49306f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/octet-stream"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"template\": \"irure ea sunt dol\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/api/v1/templates/samples"
+							},
+							"response": [
+								{
+									"id": "2c8ec762-3869-44f6-bfb6-0ad668892f74",
+									"name": "Method Not Allowed",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"template\": \"irure ea sunt dol\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/v1/templates/samples"
+									},
+									"status": "Method Not Allowed",
+									"code": 405,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "389a7015-7378-48a8-a4e9-e6bb5e7416b3",
+									"name": "Documents samples successfully rendered",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"template\": \"irure ea sunt dol\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/v1/templates/samples"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/octet-stream"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "consectetur magna amet"
+								},
+								{
+									"id": "4d018655-8f9f-4aa4-984a-eb1ebddc00b3",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"template\": \"irure ea sunt dol\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/v1/templates/samples"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "c82584ef-0ebb-496a-9828-ff5353d436d5",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"template\": \"irure ea sunt dol\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/v1/templates/samples"
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "f462eaf1-1854-47a8-8add-bd6b79e3c6fe",
+									"name": "Unsupported Media Type",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"template\": \"irure ea sunt dol\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/v1/templates/samples"
+									},
+									"status": "Unsupported Media Type",
+									"code": 415,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Get carrier template or template version",
+							"_postman_id": "6e43c49d-0eac-44d1-85f5-ca5e10d87d34",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/templates/:carrierCode?fields=0",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"templates",
+										":carrierCode"
+									],
+									"query": [
+										{
+											"key": "fields",
+											"value": "0"
+										}
+									],
+									"variable": [
+										{
+											"id": "c86b2d75-fd3a-4132-ba32-f15b054723a7",
+											"key": "carrierCode",
+											"value": "Gophr",
+											"description": "(Required) ",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "7442a303-59d3-4d52-9791-c387a6c30e6c",
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/templates/:carrierCode?fields=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"templates",
+												":carrierCode"
+											],
+											"query": [
+												{
+													"key": "fields",
+													"value": "<integer>"
+												}
+											],
+											"variable": [
+												{
+													"key": "carrierCode",
+													"value": "Gophr",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "8c82a81a-480b-4f88-a99e-55276bf32626",
+									"name": "Method Not Allowed",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/templates/:carrierCode?fields=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"templates",
+												":carrierCode"
+											],
+											"query": [
+												{
+													"key": "fields",
+													"value": "<integer>"
+												}
+											],
+											"variable": [
+												{
+													"key": "carrierCode",
+													"value": "Gophr",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Method Not Allowed",
+									"code": 405,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "b3766fe6-a704-4ce0-a8ca-7a74250b9fe9",
+									"name": "Carrier template or template version only",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/templates/:carrierCode?fields=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"templates",
+												":carrierCode"
+											],
+											"query": [
+												{
+													"key": "fields",
+													"value": "<integer>"
+												}
+											],
+											"variable": [
+												{
+													"key": "carrierCode",
+													"value": "Gophr",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "\"consectetur magna amet\""
+								},
+								{
+									"id": "c3d29919-2846-4b83-a1f4-e0cc5c25042e",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/templates/:carrierCode?fields=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"templates",
+												":carrierCode"
+											],
+											"query": [
+												{
+													"key": "fields",
+													"value": "<integer>"
+												}
+											],
+											"variable": [
+												{
+													"key": "carrierCode",
+													"value": "Gophr",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "d1d8edcc-5dd3-429e-9c0b-ace9db540a31",
+									"name": "Unsupported Media Type",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/templates/:carrierCode?fields=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"templates",
+												":carrierCode"
+											],
+											"query": [
+												{
+													"key": "fields",
+													"value": "<integer>"
+												}
+											],
+											"variable": [
+												{
+													"key": "carrierCode",
+													"value": "Gophr",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unsupported Media Type",
+									"code": 415,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Refreshes templates cache in one service instance",
+							"_postman_id": "84142c09-2c96-4166-80f1-a119e7a793f2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "{{baseUrl}}/api/v1/templates/cache/refresh"
+							},
+							"response": [
+								{
+									"id": "490b6156-b3aa-4d26-bd50-03f2bb8541b2",
+									"name": "Template cache successfully refreshed",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": "{{baseUrl}}/api/v1/templates/cache/refresh"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "86ada06a-abda-47d3-acd0-a252623128b6",
+									"name": "Method Not Allowed",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": "{{baseUrl}}/api/v1/templates/cache/refresh"
+									},
+									"status": "Method Not Allowed",
+									"code": 405,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "89b7b7bc-754e-4ae8-8670-8d3a8d3c02d6",
+									"name": "Internal Server Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": "{{baseUrl}}/api/v1/templates/cache/refresh"
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
+						}
+					],
+					"_postman_id": "6aa838a5-8b51-4530-ad95-a63c09dc1f99",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get documents for a consignment",
+					"_postman_id": "1b3d115a-b891-47c2-9181-7bf120ebc108",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"metadata\": {\r\n        \"api_key\": \"sand-3e7344d6-28dd-43c5-b272-3098fff902ba\"\r\n    },\r\n    \"insurance_provider\": \"Carrier\",\r\n    \"label_format\": \"PDF\",\r\n    \"ship_datetime\": \"2023-03-15T12:00:00Z\",\r\n    \"is_return_label\": false,\r\n    \"service_code\": \"gophr_same_day\",\r\n    \"packages\": [\r\n        {\r\n            \"tracking_number\": \"1f229756-76b5-4928-bba6-457e303d3d1f\"\r\n        },\r\n        {\r\n            \"tracking_number\": \"3e6dbefe-b329-40e0-ba17-5901119e5943\"\r\n        }\r\n    ],\r\n    \"ship_to\": {\r\n        \"name\": \"John Smith\",\r\n        \"phone_number\": \"+442087956001\",\r\n        \"company_name\": \"Smith Corp.\",\r\n        \"address_lines\": [\r\n            \"London Bridge St 32\"\r\n        ],\r\n        \"city_locality\": \"London\",\r\n        \"postal_code\": \"SE1 9SG\",\r\n        \"country_code\": \"GB\"\r\n    },\r\n    \"ship_from\": {\r\n        \"name\": \"Andrew Johnson\",\r\n        \"phone_number\": \"+441609883103\",\r\n    \"company_name\": \"Johnson Corp.\",\r\n        \"address_lines\": [\r\n            \"N End 42\"\r\n        ],\r\n        \"city_locality\": \"Osmotherley\",\r\n        \"postal_code\": \"DL6 3BB\",\r\n        \"country_code\": \"GB\"\r\n    },\r\n    \"tracking_number\": \"0ced7587-ca58-4aa1-9e69-2b0b6f7112f4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/documents/:carrierCode",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"documents",
+								":carrierCode"
+							],
+							"variable": [
+								{
+									"key": "carrierCode",
+									"value": "gophr",
+									"description": "(Required) ",
+									"type": "string"
+								}
+							]
+						},
+						"description": "Get a consignment documents"
+					},
+					"response": [
+						{
+							"id": "1d096391-500e-4bb0-984d-c773a7893866",
+							"name": "Method Not Allowed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "null",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/documents/:carrierCode",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"documents",
+										":carrierCode"
+									],
+									"variable": [
+										{
+											"key": "carrierCode",
+											"value": "Gophr",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "24eba640-17bd-4fbb-90ec-f85e12df6365",
+							"name": "Resource Not Found. Carrier templates not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "null",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/documents/:carrierCode",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"documents",
+										":carrierCode"
+									],
+									"variable": [
+										{
+											"key": "carrierCode",
+											"value": "Gophr",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "48a9a8e7-431a-4d3e-91b6-beed3d0d5029",
+							"name": "No content. None document rendered",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "null",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/documents/:carrierCode",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"documents",
+										":carrierCode"
+									],
+									"variable": [
+										{
+											"key": "carrierCode",
+											"value": "Gophr",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "8198afca-4d70-42a4-adec-21722b8080ad",
+							"name": "Documents response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "null",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/documents/:carrierCode",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"documents",
+										":carrierCode"
+									],
+									"variable": [
+										{
+											"key": "carrierCode",
+											"value": "Gophr",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{}"
+						},
+						{
+							"id": "bb6e6858-0629-42d9-9d65-3c99d862311d",
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "null",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/documents/:carrierCode",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"documents",
+										":carrierCode"
+									],
+									"variable": [
+										{
+											"key": "carrierCode",
+											"value": "Gophr",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "bc2f2018-4d40-48a0-8055-205234183fa4",
+							"name": "Internal Server Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "null",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/documents/:carrierCode",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"documents",
+										":carrierCode"
+									],
+									"variable": [
+										{
+											"key": "carrierCode",
+											"value": "Gophr",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				}
+			],
+			"_postman_id": "d6cd6324-cac5-4df1-ae4b-9416fe0cf0a5"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "86787cc3-edb8-42df-bdcc-990992674f30",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "fa07fc95-b5ee-4a4b-b024-5147b2ffce30",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "dcaa79dc-c7a0-42ce-9531-66affd93fd32",
+			"key": "baseUrl",
+			"value": "https://virtserver.swaggerhub.com/metapack/shipengine-connect-rendering-api/1.16.3",
+			"type": "string"
+		}
+	]
+}
