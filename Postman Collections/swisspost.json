@@ -1,0 +1,519 @@
+{
+	"info": {
+		"_postman_id": "28f35f3f-88f2-40ea-a670-dd6fd0df6f09",
+		"name": "SwissPost",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authorization Address Checker",
+			"_postman_id": "fad65fe8-2784-40c5-87f2-e8d7c6bc3ba7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": {
+						"tokenType": "",
+						"accessToken": "",
+						"scope": "WEDEC_VALIDATE_ADDRESS",
+						"accessTokenUrl": "https://wedec.post.ch/WEDECOAuth/token",
+						"addTokenTo": "header",
+						"client_authentication": "body",
+						"grant_type": "client_credentials",
+						"useBrowser": false,
+						"authUrl": "https://wedec.post.ch/WEDECOAuth/authorization",
+						"tokenName": "SwissPost Token",
+						"clientId": "6ce37a8100926de079ae5cae62c2f22d",
+						"clientSecret": "26b30d685b6a48b39447fed6ded8eeb0",
+						"state": "bbe6606b-b"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Addresses validation",
+			"_postman_id": "5a46d1a2-0eb3-4dfd-9f9c-b4e7e9b66e3f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{ch03_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"addressee\":{\r\n      \"firstName\":\"\",\r\n      \"lastName\":\"\",\r\n      \"title\":\"\"\r\n   },\r\n   \"geographicLocation\":{\r\n      \"house\":{\r\n         \"street\":\"Wankdorfalle\",\r\n         \"houseNumber\":\"4\",\r\n         \"additionalAddress\":\"\"\r\n      },\r\n      \"zip\":{\r\n         \"zip\":\"3030\",\r\n         \"city\":\"Bern\"\r\n      }\r\n   },\r\n   \"logisticLocation\":{\r\n      \"postBoxNumber\":\"\"\r\n   },\r\n   \"fullValidation\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://wedec.post.ch/api/address/v1/addresses/validation"
+			},
+			"response": []
+		},
+		{
+			"name": "Addresses validation Copy",
+			"_postman_id": "84c058d9-d366-4223-9493-12fa9b349b93",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"addressee\":{\r\n      \"firstName\":\"\",\r\n      \"lastName\":\"\",\r\n      \"title\":\"\"\r\n   },\r\n   \"geographicLocation\":{\r\n      \"house\":{\r\n         \"street\":\"Oltenstrasse\",\r\n         \"houseNumber\":\"51\",\r\n         \"additionalAddress\":\"\"\r\n      },\r\n      \"zip\":{\r\n         \"zip\":\"4702\",\r\n         \"city\":\"Oensingen\"\r\n      }\r\n   },\r\n   \"logisticLocation\":{\r\n      \"postBoxNumber\":\"\"\r\n   },\r\n   \"fullValidation\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://wedec.post.ch/api/address/v1/addresses/validation"
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization Delivery",
+			"_postman_id": "1d5c57f3-86cf-4e40-a84a-81cd1c81cc8b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": {
+						"scope": "WEDEC_DELIVERY",
+						"accessTokenUrl": "https://wedec.post.ch/WEDECOAuth/token",
+						"addTokenTo": "header",
+						"client_authentication": "body",
+						"grant_type": "client_credentials",
+						"useBrowser": false,
+						"authUrl": "https://wedec.post.ch/WEDECOAuth/authorization",
+						"tokenName": "SwissPost Token",
+						"clientId": "6ce37a8100926de079ae5cae62c2f22d",
+						"clientSecret": "26b30d685b6a48b39447fed6ded8eeb0",
+						"state": "bbe6606b-b"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "6ce37a8100926de079ae5cae62c2f22d",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "client_secret",
+						"value": "26b30d685b6a48b39447fed6ded8eeb0",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DeliveryabilitiesWhen",
+			"_postman_id": "e5eae91a-ca11-45eb-9a3f-724c3ff44037",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{ch03_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"address\": {\r\n    \"type\": \"MAIN\",\r\n    \"nickname\": \"\",\r\n    \"addressee\": {\r\n      \"title\": \"\",\r\n      \"firstName\": \"\",\r\n      \"lastName\": \"\",\r\n      \"companyName\": \"\",\r\n      \"companyAdditionalInformation\": \"\"\r\n    },\r\n    \"logisticLocation\": {\r\n      \"postBoxNumber\": 0,\r\n      \"house\": {\r\n        \"additionalAddress\": \"\",\r\n        \"street\": \"\",\r\n        \"houseNumber\": \"\",\r\n        \"houseKey\": \"\"\r\n      },\r\n      \"zip\": {\r\n        \"zip\": \"\",\r\n        \"city\": \"\"\r\n      }\r\n    },\r\n    \"geographicLocation\": {\r\n      \"house\": {\r\n        \"additionalAddress\": \"\",\r\n        \"street\": \"Buchbergstrasse\",\r\n        \"houseNumber\": \"7\",\r\n        \"houseKey\": \"\"\r\n      },\r\n      \"zip\": {\r\n        \"zip\":\"8200\",\r\n         \"city\":\"Schaffhausen\"\r\n      }\r\n    },\r\n    \"id\": \"\"\r\n  },\r\n  \"date\": \"2022-03-14\",\r\n  \"dayCount\":0,\r\n  \"deliveryDates\": [\r\n    \"2022-03-22\"\r\n   \r\n  ],\r\n  \"dropOffPoint\": \"\",\r\n \"productsFilter\": [\r\n    \"ZFZ0912,PRI\",\r\n    \"ZFZ1114,PRI\",\r\n    \"ZFZ1217,PRI\",\r\n    \"ZF16302100,PRI\",\r\n    \"ZF16301800,PRI\",\r\n    \"ZF17301900,PRI\",\r\n    \"ZF18302000,PRI\",\r\n    \"ZF19302100,PRI\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://wedec.post.ch/api/delivery/v1/deliverabilities/when/"
+			},
+			"response": []
+		},
+		{
+			"name": "DeliveryabilitiesWhen Copy",
+			"_postman_id": "960bb864-800e-4a22-9d36-b96fb25fdafe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{ch03_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"address\": {\r\n    \"type\": \"MAIN\",\r\n    \"nickname\": \"\",\r\n    \"addressee\": {\r\n      \"title\": \"\",\r\n      \"firstName\": \"\",\r\n      \"lastName\": \"\",\r\n      \"companyName\": \"\",\r\n      \"companyAdditionalInformation\": \"\"\r\n    },\r\n    \"logisticLocation\": {\r\n      \"postBoxNumber\": 0,\r\n      \"house\": {\r\n        \"additionalAddress\": \"\",\r\n        \"street\": \"\",\r\n        \"houseNumber\": \"\",\r\n        \"houseKey\": \"\"\r\n      },\r\n      \"zip\": {\r\n        \"zip\": \"\",\r\n        \"city\": \"\"\r\n      }\r\n    },\r\n    \"geographicLocation\": {\r\n      \"house\": {\r\n        \"additionalAddress\": \"\",\r\n        \"street\": \"Bayernstraße\",\r\n        \"houseNumber\": \"7\",\r\n        \"houseKey\": \"\"\r\n      },\r\n      \"zip\": {\r\n        \"zip\":\"5020\",\r\n         \"city\":\"Salzburg\"\r\n      }\r\n    },\r\n    \"id\": \"\"\r\n  },\r\n  \"date\": \"2022-02-20\",\r\n  \"dayCount\":0,\r\n  \"deliveryDates\": [\r\n    \"2022-02-22\"\r\n   \r\n  ],\r\n  \"dropOffPoint\": \"\",\r\n \"productsFilter\": [\r\n    \"ZFZ0912,PRI\",\r\n    \"ZFZ1114,PRI\",\r\n    \"ZFZ1217,PRI\",\r\n    \"ZF16302100,PRI\",\r\n    \"ZF16301800,PRI\",\r\n    \"ZF17301900,PRI\",\r\n    \"ZF18302000,PRI\",\r\n    \"ZF19302100,PRI\",\r\n    \"ZF19302100,ECO\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://wedec.post.ch/api/delivery/v1/deliverabilities/when/"
+			},
+			"response": []
+		},
+		{
+			"name": "DeliveryabilitiesWhen Copy 3",
+			"_postman_id": "ebdf8ed3-05d1-417d-92a3-763d0954a32b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{ch03_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": {\r\n        \"type\": \"MAIN\",\r\n        \"addressee\": {\r\n            \"title\": \"\",\r\n            \"firstName\": \"Freytag\",\r\n            \"lastName\": \"Simone\",\r\n            \"companyName\": \"Freytag Corporation\",\r\n            \"companyAdditionalInformation\": \"\"\r\n        },\r\n        \"geographicLocation\": {\r\n            \"house\": {\r\n                \"additionalAddress\": \"\",\r\n                \"street\": \"Untere Aegerten\",\r\n                \"houseNumber\": \"82\",\r\n                \"houseKey\": \"\"\r\n            },\r\n            \"zip\": {\r\n                \"zip\": \"2606\",\r\n                \"city\": \"Vienna\"\r\n            }\r\n        }\r\n    },\r\n    \"date\": \"2023-02-17\",\r\n    \"deliveryDates\": [\r\n        \"2023-02-22\"\r\n    ],\r\n    \"productsFilter\": [\r\n        \"ZF19302100,ECO\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://wedec.post.ch/api/delivery/v1/deliverabilities/when/"
+			},
+			"response": []
+		},
+		{
+			"name": "DeliveryabilitiesWhen Copy",
+			"_postman_id": "40da3d01-2aa4-4235-890b-31d593c9ec17",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{ch03_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": {\r\n        \"type\": \"MAIN\",\r\n        \"addressee\": {\r\n            \"title\": \"\",\r\n            \"firstName\": \"Freytag\",\r\n            \"lastName\": \"Simone\",\r\n            \"companyName\": \"Freytag Corporation\",\r\n            \"companyAdditionalInformation\": \"\"\r\n        },\r\n        \"geographicLocation\": {\r\n            \"house\": {\r\n                \"additionalAddress\": \"\",\r\n                \"street\": \"Untere Aegerten\",\r\n                \"houseNumber\": \"82\",\r\n                \"houseKey\": \"\"\r\n            },\r\n            \"zip\": {\r\n                \"zip\": \"2606\",\r\n                \"city\": \"Corgémont\"\r\n            }\r\n        }\r\n    },\r\n    \"date\": \"2022-06-08\",\r\n    \"deliveryDates\": [\"2022-06-09\"],\r\n    \"productsFilter\": [\"SKB\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://wedec.post.ch/api/delivery/v1/deliverabilities/when/"
+			},
+			"response": []
+		},
+		{
+			"name": "DeliveryabilitiesWhen Copy 2",
+			"_postman_id": "7d8601f1-95a8-4156-a173-5a8e0e20043a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{ch03_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": {\r\n        \"type\": \"MAIN\",\r\n        \"addressee\": {\r\n            \"title\": \"\",\r\n            \"firstName\": \"Freytag\",\r\n            \"lastName\": \"Simone\",\r\n            \"companyName\": \"Freytag Corporation\",\r\n            \"companyAdditionalInformation\": \"\"\r\n        },\r\n        \"geographicLocation\": {\r\n            \"house\": {\r\n                \"additionalAddress\": \"\",\r\n                \"street\": \"Rennweg\",\r\n                \"houseNumber\": \"7\",\r\n                \"houseKey\": \"\"\r\n            },\r\n            \"zip\": {\r\n                \"zip\": \"8001\",\r\n                \"city\": \"Zürich\"\r\n            }\r\n        }\r\n    },\r\n    \"date\": \"2022-06-15\",\r\n    \"deliveryDates\": [\"2022-06-16\"],\r\n    \"productsFilter\": [\"SKB\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://wedec.post.ch/api/delivery/v1/deliverabilities/when/"
+			},
+			"response": []
+		},
+		{
+			"name": "Deliveryabilities",
+			"_postman_id": "54e4a89f-f620-4e81-9529-1e1616275d07",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{ch03_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"address\": {\r\n    \"type\": \"MAIN\",\r\n    \"nickname\": \"\",\r\n    \"addressee\": {\r\n      \"title\": \"\",\r\n      \"firstName\": \"\",\r\n      \"lastName\": \"\",\r\n      \"companyName\": \"\",\r\n      \"companyAdditionalInformation\": \"\"\r\n    },\r\n    \"logisticLocation\": {\r\n      \"postBoxNumber\": 0,\r\n      \"house\": {\r\n        \"additionalAddress\": \"\",\r\n        \"street\": \"\",\r\n        \"houseNumber\": \"\",\r\n        \"houseKey\": \"\"\r\n      },\r\n      \"zip\": {\r\n        \"zip\": \"\",\r\n        \"city\": \"\"\r\n      }\r\n    },\r\n    \"geographicLocation\": {\r\n      \"house\": {\r\n        \"additionalAddress\": \"\",\r\n        \"street\": \"Buchbergstrasse\",\r\n        \"houseNumber\": \"7\",\r\n        \"houseKey\": \"\"\r\n      },\r\n      \"zip\": {\r\n        \"zip\": \"8200\",\r\n        \"city\": \"Schaffhausen\"\r\n      }\r\n    },\r\n    \"id\": \"\"\r\n  },\r\n  \"date\": \"2021-12-28\",\r\n  \"dayCount\": 0,\r\n  \"deliveryDates\": [\r\n    \"2021-12-29\" \r\n  ],\r\n  \"dropOffPoint\": \"\",\r\n \"productsFilter\": [\r\n    \"PRI\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://wedec.post.ch/api/delivery/v1/deliverabilities/"
+			},
+			"response": []
+		},
+		{
+			"name": "DeliveryabilitiesHow",
+			"_postman_id": "2b512c6b-5b69-4db5-a9af-b57514312ca6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAtMjU2In0.WwWIguRZc7f786IeMPEcGeLLzUXlKrZjVAPnpOzTHH2nszm_6nmujIvbq_0wDz9gxKnDYB7bHUkvoKqEAZRWuxAtOvpuX9vlrnoq0KXvnHpxfSfk1fFPJPUYBdONkRFDDSm1RPMG3EdQyNKvI2IWRFeoxxNpIcOI_Y2-_cMdlGuxmu6TLcwXo5jXL7mj--BPw2RuBqWQSgF-1mn48V17Vhas6FJFFtX_oCM81TpIxbINk8ac8fUP8rDRM-CpiuC2-g69-5P7HGGV3kXJJ-nEBWCOwre-GNutK279NG46LLqwQ71Ngq_kLk_w-bZGysnuPDGayhcupD0zdKle93cszQ.3dzqvm2IsP6IS0Ut.ItMmMlhT_OUfjyJBToCBpTaIlB5doteFOInq3Cf8QPzCtod1Kra_cC82VlBNoX5Yq5Z7ihFPpANkVqnAPDsts3z_qvixdC_6za5Tv_he8j9kb6Dir_xCt4CHIE21jvO9YEGwaNEsWdTZhBCfEmFW1bkq__JBfyg-tIQMb1KYyeEaChLuLv2XvNjjbfKfth_UbGFPSpTPT11b_jB6PjSNbpxRv02clapE6nSshSkYJPHacTfJ-hJShL6tBU7TMjhBCpVjj9f1Nfd-hjUW55TEamRQnAt9b1Ek2vD0q4Yp1tq0fi0ywIzZ3KxbfF3oflKq0qtreIukohBBLoV3eLpiExEc6ZxV9ow3dQ3sLGwHpA4sgIUvvSbob3j8UZUij1GXJI16sLtqKxnA15uzzjb75Agm1weOWj4gii8PrCniM6dLs6AvXP7ArD9Le1_05sLS5WaPGnCD52ciUbUmKvLcIbc3pO3dXGE78hN3c6EHEL-85z0umhEtll9yovUtL51yQ7hyrry8gBNsjwaqVHBTSLBjrXajqUs0VtAGvFfsTFmE4Q1XkaB0l1oDZT_Hy-UUPDrNcu743rdACejnpIaER8DOZ7Dtw5IagXrlVY5sOksQ5J4ZHDb8rDV-77xMtiBe84H2d_-slBm75gD7J2EswbZAv_dKaIRbkEdFANkiEIUcTU-_SMIXsgqUHyDS5czbHyDrOyFBiIV1h4SOwV8twI6B3p1ceD7nkuv0MAdfX5QntfIAR932uigXSrd8HrIMJX5DRN6iXR4.qz1_oVgkuvqXWF7SmALhAA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://wedec.post.ch/api/delivery/v1/deliverabilities/how/SKB"
+			},
+			"response": []
+		},
+		{
+			"name": "DeliveryabilitiesSameDayWhere",
+			"_postman_id": "368502a0-d4b9-47fb-8d6a-0e949dc2f60f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAtMjU2In0.Vhr1B9EAuIPeXccMBJkAxLkrNUSfT8nlOXDl5iWpCP7UFCfuvSQF2t8_OVmqlBYEFR3alODAuNh810F5Wjk1U_cVxx8XfWq2ZA2ovAmcHicaLNHljlHNSqJ5UTkEtG_mHQ6JvCD_yJCbQLgT-0Iq0laSda326D62JOYP5i9DQhI4UsVZw_C-Km58soJVAt5M-Qazjj_2gLnhI75T2DpQSnsPGDMSh1maOr65rR_K_Czys5JvFtQYHxpPymCUk76-krQQD4EnahpfLZpHF1N0z-7E1_qN34OSDUFiZRIpaNpgMMaMJSVUOj688jrSH8Cl_ppx7Qk0tYdYqF4mz8kE4g.HVSpDdUhvRM2EVwH.sp_Dt7iXjNGR5jevkOaZFP_YsunLBo_HgWK82VWUp1M-RAolxyq64TDJrlB8aEIjnzaE5IUFu75IqvZEWTsl9YXvFCSb5np9RDOj2mnqcx62w47LIPGNyh4cqrQQ7d_dDP8j4rsuD9hSK0Zoi6TQG3pJqkPs81WvtXjqv-SFLLQtrBeun-wJvjGdyEonLVY1ghsVRevxADZ9sFEAELYsdMxDp3bGmP_90BNIsAKEyS-QYNC3NvF6IKP69emu4_bUUwMDCI9ZBF0-1SBHx5ka8U5hquiNwjF6PAgQBa5yhhfEze9pQmm4mVK5Wz2U8SQxukPFLnqYyv0C9IRuCvATwZCY63a1GOBYp4VOy4MhJw8It1UR6OdQ3LR31r1kWWWhPxU2MhdTpSssjmnF9EaKQi2WkepBqih-OqIQmBOnJECePRe4MWvUoRw162PgQvqVSmIr3c8DSah3O_OrBdjV29MRJt24HUWn9CgP3xbza8V5bAqhpPabKiOCQijUmyINMCIOzkuNPE05mE_EuW01fYwXAckrjX43TZC3XKKTD2EOZWGaDAMq-nCeG50GuuoS7fA3opTzpepG2WQPth1letCkpKiICCZx1300xDlrlm7oKvPb7rIrCyzd5Z1CET7xcg-pdrniXcPkyYo3ArbDNga5wFShUPdlDxbEuav7n3gBQKd5wwcsVDkE7SbdnTDe9gjVlWFVHE5H0PfkHTDixYwHGH6Moj0yJQnBpA6_oNyyh2kVcykzeRUMTqyEZ3jv8DKzqBd25I0.6mkVRWb2JV0pXaPSUWLmYw"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"address\": {\r\n    \"type\": \"MAIN\",\r\n    \"nickname\": \"\",\r\n    \"addressee\": {\r\n      \"title\": \"MISTER\",\r\n      \"firstName\": \"Hans\",\r\n      \"lastName\": \"Muster\",\r\n      \"companyName\": \"\",\r\n      \"companyAdditionalInformation\": \"\"\r\n    },\r\n    \"logisticLocation\": {\r\n      \"postBoxNumber\": 0,\r\n      \"house\": {\r\n        \"additionalAddress\": \"\",\r\n        \"street\": \"Buchbergstrasse\",\r\n        \"houseNumber\": \"7\",\r\n        \"houseKey\": \"\"\r\n      },\r\n      \"zip\": {\r\n        \"zip\": \"8200\",\r\n        \"city\": \"Schaffhausen\"\r\n      }\r\n    },\r\n    \"geographicLocation\": {\r\n      \"house\": {\r\n        \"additionalAddress\": \"\",\r\n        \"street\": \"Buchbergstrasse\",\r\n        \"houseNumber\": \"7\",\r\n        \"houseKey\": \"\"\r\n      },\r\n      \"zip\": {\r\n        \"zip\": \"8200\",\r\n        \"city\": \"Schaffhausen\"\r\n      }\r\n    },\r\n    \"id\": \"\"\r\n  },\r\n  \"deliveryDate\": \"2021-12-28\",\r\n  \"dropOffPointPrefixes\": [\r\n    \"\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://wedec.post.ch/api/delivery/v1/deliverabilities/sameday/where"
+			},
+			"response": []
+		},
+		{
+			"name": "getTokenValidate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a7d2980a-c713-4974-97f3-30c02f8a717d",
+						"exec": [
+							"pm.collectionVariables.set(\"ch03_token\", pm.response.json().access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "e6442a22-0ecf-48b9-b7ff-2ccb935c5880",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{ch03_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "WEDEC_VALIDATE_ADDRESS",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "6ce37a8100926de079ae5cae62c2f22d",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "26b30d685b6a48b39447fed6ded8eeb0",
+							"type": "text"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": "https://wedec.post.ch/WEDECOAuth/token"
+			},
+			"response": []
+		},
+		{
+			"name": "getTokenDelivery",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a7d2980a-c713-4974-97f3-30c02f8a717d",
+						"exec": [
+							"pm.collectionVariables.set(\"ch03_token\", pm.response.json().access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "e57da45e-db9b-4652-a888-07cce23917fd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{ch03_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "WEDEC_DELIVERY",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "6ce37a8100926de079ae5cae62c2f22d",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "26b30d685b6a48b39447fed6ded8eeb0",
+							"type": "text"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": "https://wedec.post.ch/WEDECOAuth/token"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "{{ch03_token}}"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "21f741cb-9879-4d59-900e-335c34c1749e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2a1b4cc3-d838-4633-8d86-93256b23987f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "561d1abd-8d1d-41a4-ac04-6fb3a5f26366",
+			"key": "ch03_token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
