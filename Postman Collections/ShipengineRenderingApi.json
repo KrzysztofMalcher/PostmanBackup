@@ -1063,6 +1063,346 @@
 							"body": ""
 						}
 					]
+				},
+				{
+					"name": "Get documents for a consignment Copy",
+					"id": "1a60275a-d350-406e-8a75-963a866ab192",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"metadata\": {\r\n        \"api_key\": \"sand-3e7344d6-28dd-43c5-b272-3098fff902ba\"\r\n    },\r\n    \"insurance_provider\": \"Carrier\",\r\n    \"label_format\": \"PDF\",\r\n    \"ship_datetime\": \"2023-03-21T22:14:16.658Z\",\r\n    \"is_return_label\": false,\r\n    \"service_code\": \"gophr_same_day\",\r\n    \"packages\": [\r\n        {\r\n            \"insured_value\": {\r\n                \"amount\": \"10\",\r\n                \"currency\": \"GBP\"\r\n            },\r\n            \"dimension_details\": {\r\n                \"dimensions_in_centimeters\": {\r\n                    \"height\": 11,\r\n                    \"length\": 12,\r\n                    \"width\": 13\r\n                },\r\n                \"dimensions_in_inches\": {\r\n                    \"height\": 1.5,\r\n                    \"length\": 1.6,\r\n                    \"width\": 1.7\r\n                },\r\n                \"source_dimension_unit\": \"centimeters\",\r\n                \"source_dimensions\": {\r\n                    \"height\": 14,\r\n                    \"length\": 15,\r\n                    \"width\": 16\r\n                }\r\n            },\r\n            \"weight_details\": {\r\n                \"weight_in_grams\": 1000,\r\n                \"source_weight\": 1000,\r\n                \"source_weight_unit\": \"grams\"\r\n            }\r\n        },\r\n        {\r\n            \"insured_value\": {\r\n                \"amount\": \"20\",\r\n                \"currency\": \"GBP\"\r\n            },\r\n            \"dimension_details\": {\r\n                \"dimensions_in_centimeters\": {\r\n                    \"height\": 21,\r\n                    \"length\": 22,\r\n                    \"width\": 23\r\n                },\r\n                \"dimensions_in_inches\": {\r\n                    \"height\": 2.1,\r\n                    \"length\": 2.2,\r\n                    \"width\": 2.3\r\n                },\r\n                \"source_dimension_unit\": \"centimeters\",\r\n                \"source_dimensions\": {\r\n                    \"height\": 24,\r\n                    \"length\": 25,\r\n                    \"width\": 26\r\n                }\r\n            },\r\n            \"weight_details\": {\r\n                \"weight_in_grams\": 2000,\r\n                \"source_weight\": 2000,\r\n                \"source_weight_unit\": \"grams\"\r\n            }\r\n        }\r\n    ],\r\n    \"ship_to\": {\r\n        \"name\": \"John Smith\",\r\n        \"phone_number\": \"+442087956001\",\r\n        \"company_name\": \"Smith Corp.\",\r\n        \"address_lines\": [\r\n            \"London Bridge St 32\"\r\n        ],\r\n        \"city_locality\": \"London\",\r\n        \"postal_code\": \"SE1 9SG\",\r\n        \"country_code\": \"GB\"\r\n    },\r\n    \"ship_from\": {\r\n        \"name\": \"Andrew Johnson\",\r\n        \"phone_number\": \"+441609883103\",\r\n        \"company_name\": \"Johnson Corp.\",\r\n        \"address_lines\": [\r\n            \"N End 42\"\r\n        ],\r\n        \"city_locality\": \"Osmotherley\",\r\n        \"postal_code\": \"DL6 3BB\",\r\n        \"country_code\": \"GB\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/documents/:carrierCode",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"documents",
+								":carrierCode"
+							],
+							"variable": [
+								{
+									"id": "f59b4d3d-1532-4cc1-82a1-b845231bfc49",
+									"key": "carrierCode",
+									"value": "gophr",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Get a consignment documents"
+					},
+					"response": [
+						{
+							"id": "5bac8302-a212-4715-a593-92494a0a7505",
+							"name": "Documents response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "null",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/documents/:carrierCode",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"documents",
+										":carrierCode"
+									],
+									"variable": [
+										{
+											"key": "carrierCode",
+											"value": "Gophr",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{}"
+						},
+						{
+							"id": "d649cf22-04e3-4ffd-a9c2-2fef141a8def",
+							"name": "No content. None document rendered",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "null",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/documents/:carrierCode",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"documents",
+										":carrierCode"
+									],
+									"variable": [
+										{
+											"key": "carrierCode",
+											"value": "Gophr",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "0c142e66-b754-4b7c-b6cc-6f1a4a72c7ad",
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "null",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/documents/:carrierCode",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"documents",
+										":carrierCode"
+									],
+									"variable": [
+										{
+											"key": "carrierCode",
+											"value": "Gophr",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "b2279292-fc2c-46b8-a59d-cf2933cf8cef",
+							"name": "Resource Not Found. Carrier templates not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "null",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/documents/:carrierCode",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"documents",
+										":carrierCode"
+									],
+									"variable": [
+										{
+											"key": "carrierCode",
+											"value": "Gophr",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "41f56ba1-8a98-4383-9721-23b8557c58e7",
+							"name": "Method Not Allowed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "null",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/documents/:carrierCode",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"documents",
+										":carrierCode"
+									],
+									"variable": [
+										{
+											"key": "carrierCode",
+											"value": "Gophr",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "73ffe9af-aae1-4fc8-9a0a-bba7b2a2fe3f",
+							"name": "Internal Server Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "null",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/documents/:carrierCode",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"documents",
+										":carrierCode"
+									],
+									"variable": [
+										{
+											"key": "carrierCode",
+											"value": "Gophr",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
 				}
 			],
 			"id": "d6cd6324-cac5-4df1-ae4b-9416fe0cf0a5"
@@ -1092,7 +1432,7 @@
 	],
 	"variable": [
 		{
-			"id": "39497b2d-5e5f-4c33-b415-d4442a7d73bc",
+			"id": "e1e7c438-3d2c-4fda-b03a-866ec72f8186",
 			"key": "baseUrl",
 			"value": "http://connect-rendering-prod.kube.seplocal.com",
 			"type": "string"
