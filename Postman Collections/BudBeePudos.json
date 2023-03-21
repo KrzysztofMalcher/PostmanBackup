@@ -136,7 +136,7 @@
 			"response": []
 		},
 		{
-			"name": "getAllPointsFI_syncTest",
+			"name": "getAllPointsFI_syncTest_reverse",
 			"id": "b946c666-7aac-49c8-80f8-8b57ab6444a2",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
