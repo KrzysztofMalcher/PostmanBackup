@@ -1,50 +1,20 @@
 {
 	"info": {
-		"_postman_id": "9f67e033-b169-4a23-bb1b-a5952a5c133e",
+		"_postman_id": "1703ce2b-4902-4766-832c-998579a38d4a",
 		"name": "INPOST",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "INPOST get all machine",
-			"id": "064fe1bc-35d4-420d-99f3-40b098470d70",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"_postman_id": "7b51de0a-759e-4986-bd92-016223507c6f",
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://api-uk.easypack24.net/machines?token=8a5a69b4-f05a-4b36-b9f5-a1836a720d38",
-					"protocol": "http",
-					"host": [
-						"api-uk",
-						"easypack24",
-						"net"
-					],
-					"path": [
-						"machines"
-					],
-					"query": [
-						{
-							"key": "token",
-							"value": "8a5a69b4-f05a-4b36-b9f5-a1836a720d38"
-						}
-					]
+				"body": {
+					"mode": "formdata",
+					"formdata": []
 				},
-				"description": "getting info from inpost"
-			},
-			"response": []
-		},
-		{
-			"name": "INPOST get all machines github second chang",
-			"id": "58a6413a-c2e2-46ae-9543-6022c670aa0f",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
 				"url": {
 					"raw": "http://api-uk.easypack24.net/machines?token=8a5a69b4-f05a-4b36-b9f5-a1836a720d38",
 					"protocol": "http",
@@ -69,13 +39,14 @@
 		},
 		{
 			"name": "INPOST get all machine Copy",
-			"id": "af14a833-516d-44aa-aa04-d697c9bc80eb",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"_postman_id": "05f08892-4b5b-4c98-8a34-89cc4d016e39",
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
 				"url": {
 					"raw": "http://api-uk.easypack24.net/machines?token=8a5a69b4-f05a-4b36-b9f5-a1836a720d38",
 					"protocol": "http",
@@ -100,13 +71,14 @@
 		},
 		{
 			"name": "INPOST get machine by ID",
-			"id": "4fccd95f-22d6-4e93-a112-11ea412901bb",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"_postman_id": "de533c89-dab2-4b64-b167-a4139f5c4d61",
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
 				"url": {
 					"raw": "http://api-uk.easypack24.net/machines?token=8a5a69b4-f05a-4b36-b9f5-a1836a720d38&post_code=MK9%201FG&limit=5",
 					"protocol": "http",
@@ -139,13 +111,14 @@
 		},
 		{
 			"name": "INPOST get machine by ID Copy",
-			"id": "c2ec21f2-b1d8-4f04-82cf-d224ca0b9e23",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"_postman_id": "ccac41ac-3506-41b7-9e1d-005eb36144bb",
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
 				"url": {
 					"raw": "http://api-uk.easypack24.net/parcels?token=b3b5ae8a-bea3-48a2-8c19-26e845faa449&provider_name=MetaPack{\"description\":\"UK110710900\",\"size\":\"A\",\"tmp_id\":\"-1\",\"target_machine\":\"UKSOU18816\",\"receiver\":{\"email\":\"rubi0987@hotmail.com\",\"phone\":\"484845968\"}}PostShipmentAndGetIdentifier_UK110710900_A_UKSOU18816_-1_rubi0987@hotmail.com/484845968",
 					"protocol": "http",
