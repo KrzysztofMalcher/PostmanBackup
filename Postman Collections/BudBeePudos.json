@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "7b5f521f-7bc9-431f-91dd-d5c68d8a56ea",
+		"name": "Budbee Pudo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllPointsSE",
+			"_postman_id": "93fdb0a7-f497-49db-af55-a09250905959",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.budbee.boxes-v1+json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.budbee.boxes-v1+json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "{{url}}/boxes/all/SE"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPointsNL",
+			"_postman_id": "26f1c1a7-b668-4aa5-8718-3aec57367090",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.budbee.boxes-v1+json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.budbee.boxes-v1+json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "{{url}}/boxes/all/NL"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPointsBE",
+			"_postman_id": "16c421bc-1657-4925-820f-4795d8edf51f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.budbee.boxes-v1+json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.budbee.boxes-v1+json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "{{url}}/boxes/all/BE"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPointsDK",
+			"_postman_id": "b5da4c95-98e9-4510-a474-dcf5d3ab6289",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.budbee.boxes-v1+json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.budbee.boxes-v1+json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "{{url}}/boxes/all/DK"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPointsFI",
+			"_postman_id": "029c5c8d-73a9-4825-8c21-60f11edf07e8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.budbee.boxes-v1+json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.budbee.boxes-v1+json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "{{url}}/boxes/all/FI"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": {
+			"password": "e10a1f12-ffb0-4016-be9c-5bfeec260484a216cbbf-a422-4860-ad26-f71b479247ff",
+			"username": "525416e5-e4db-49d0-9ca1-2e0307e738fd"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3a314298-0032-413a-bc15-a7a41ffb1621",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d17db105-d37d-44d7-8f2d-a6ef69d7175d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "cd908253-61b3-4724-b77e-f463cde2d1e3",
+			"key": "url",
+			"value": "https://api.budbee.com",
+			"type": "string"
+		}
+	]
+}
