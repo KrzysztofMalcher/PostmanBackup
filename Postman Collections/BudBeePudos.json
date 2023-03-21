@@ -7,7 +7,7 @@
 	"item": [
 		{
 			"name": "getAllPointsSE",
-			"_postman_id": "93fdb0a7-f497-49db-af55-a09250905959",
+			"id": "93fdb0a7-f497-49db-af55-a09250905959",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -33,7 +33,7 @@
 		},
 		{
 			"name": "getAllPointsNL",
-			"_postman_id": "26f1c1a7-b668-4aa5-8718-3aec57367090",
+			"id": "26f1c1a7-b668-4aa5-8718-3aec57367090",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -59,7 +59,7 @@
 		},
 		{
 			"name": "getAllPointsBE",
-			"_postman_id": "16c421bc-1657-4925-820f-4795d8edf51f",
+			"id": "16c421bc-1657-4925-820f-4795d8edf51f",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -85,7 +85,7 @@
 		},
 		{
 			"name": "getAllPointsDK",
-			"_postman_id": "b5da4c95-98e9-4510-a474-dcf5d3ab6289",
+			"id": "b5da4c95-98e9-4510-a474-dcf5d3ab6289",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -111,7 +111,33 @@
 		},
 		{
 			"name": "getAllPointsFI",
-			"_postman_id": "029c5c8d-73a9-4825-8c21-60f11edf07e8",
+			"id": "029c5c8d-73a9-4825-8c21-60f11edf07e8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.budbee.boxes-v1+json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.budbee.boxes-v1+json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "{{url}}/boxes/all/FI"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPointsFI_syncTest",
+			"id": "b946c666-7aac-49c8-80f8-8b57ab6444a2",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -167,10 +193,9 @@
 	],
 	"variable": [
 		{
-			"id": "cd908253-61b3-4724-b77e-f463cde2d1e3",
+			"id": "ddda2afe-897d-4fe3-b9a7-dc275f9f8d4a",
 			"key": "url",
-			"value": "https://api.budbee.com",
-			"type": "string"
+			"value": "https://api.budbee.com"
 		}
 	]
 }
