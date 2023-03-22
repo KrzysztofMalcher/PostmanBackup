@@ -745,7 +745,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"metadata\": {\r\n        \"api_key\": \"sand-3e7344d6-28dd-43c5-b272-3098fff902ba\"\r\n    },\r\n    \"insurance_provider\": \"Carrier\",\r\n    \"label_format\": \"PDF\",\r\n    \"ship_datetime\": \"2023-03-15T12:00:00Z\",\r\n    \"is_return_label\": false,\r\n    \"service_code\": \"gophr_same_day\",\r\n    \"packages\": [\r\n        {\r\n            \"tracking_number\": \"1f229756-76b5-4928-bba6-457e303d3d1f\"\r\n        },\r\n        {\r\n            \"tracking_number\": \"3e6dbefe-b329-40e0-ba17-5901119e5943\"\r\n        }\r\n    ],\r\n    \"ship_to\": {\r\n        \"name\": \"John Smith\",\r\n        \"phone_number\": \"+442087956001\",\r\n        \"company_name\": \"Smith Corp.\",\r\n        \"address_lines\": [\r\n            \"London Bridge St 32\"\r\n        ],\r\n        \"city_locality\": \"London\",\r\n        \"postal_code\": \"SE1 9SG\",\r\n        \"country_code\": \"GB\"\r\n    },\r\n    \"ship_from\": {\r\n        \"name\": \"Andrew Johnson\",\r\n        \"phone_number\": \"+441609883103\",\r\n    \"company_name\": \"Johnson Corp.\",\r\n        \"address_lines\": [\r\n            \"N End 42\"\r\n        ],\r\n        \"city_locality\": \"Osmotherley\",\r\n        \"postal_code\": \"DL6 3BB\",\r\n        \"country_code\": \"GB\"\r\n    },\r\n    \"tracking_number\": \"0ced7587-ca58-4aa1-9e69-2b0b6f7112f4\"\r\n}",
+							"raw": "{\r\n    \"metadata\": {\r\n        \"api_key\": \"sand-3e7344d6-28dd-43c5-b272-3098fff902ba\"\r\n    },\r\n    \"insurance_provider\": \"Carrier\",\r\n    \"label_format\": \"PDF\",\r\n    \"ship_datetime\": \"2023-03-22T06:36:37.786Z\",\r\n    \"is_return_label\": false,\r\n    \"service_code\": \"gophr_same_day\",\r\n    \"packages\": [\r\n        {\r\n            \"insured_value\": {\r\n                \"amount\": \"10\",\r\n                \"currency\": \"GBP\"\r\n            },\r\n            \"dimension_details\": {\r\n                \"dimensions_in_centimeters\": {\r\n                    \"height\": 11,\r\n                    \"length\": 12,\r\n                    \"width\": 13\r\n                },\r\n                \"dimensions_in_inches\": {\r\n                    \"height\": 1.5,\r\n                    \"length\": 1.6,\r\n                    \"width\": 1.7\r\n                },\r\n                \"source_dimension_unit\": \"centimeters\",\r\n                \"source_dimensions\": {\r\n                    \"height\": 14,\r\n                    \"length\": 15,\r\n                    \"width\": 16\r\n                }\r\n            },\r\n            \"weight_details\": {\r\n                \"weight_in_grams\": 1000,\r\n                \"source_weight\": 1000,\r\n                \"source_weight_unit\": \"grams\"\r\n            }\r\n        },\r\n        {\r\n            \"insured_value\": {\r\n                \"amount\": \"20\",\r\n                \"currency\": \"GBP\"\r\n            },\r\n            \"dimension_details\": {\r\n                \"dimensions_in_centimeters\": {\r\n                    \"height\": 21,\r\n                    \"length\": 22,\r\n                    \"width\": 23\r\n                },\r\n                \"dimensions_in_inches\": {\r\n                    \"height\": 2.1,\r\n                    \"length\": 2.2,\r\n                    \"width\": 2.3\r\n                },\r\n                \"source_dimension_unit\": \"centimeters\",\r\n                \"source_dimensions\": {\r\n                    \"height\": 24,\r\n                    \"length\": 25,\r\n                    \"width\": 26\r\n                }\r\n            },\r\n            \"weight_details\": {\r\n                \"weight_in_grams\": 2000,\r\n                \"source_weight\": 2000,\r\n                \"source_weight_unit\": \"grams\"\r\n            }\r\n        }\r\n    ],\r\n    \"ship_to\": {\r\n        \"name\": \"John Smith\",\r\n        \"phone_number\": \"+442087956001\",\r\n        \"company_name\": \"Smith Corp.\",\r\n        \"address_lines\": [\r\n            \"London Bridge St 32\"\r\n        ],\r\n        \"city_locality\": \"London\",\r\n        \"postal_code\": \"SE1 9SG\",\r\n        \"country_code\": \"GB\"\r\n    },\r\n    \"ship_from\": {\r\n        \"name\": \"Andrew Johnson\",\r\n        \"phone_number\": \"+441609883103\",\r\n        \"company_name\": \"Johnson Corp.\",\r\n        \"address_lines\": [\r\n            \"N End 42\"\r\n        ],\r\n        \"city_locality\": \"Osmotherley\",\r\n        \"postal_code\": \"DL6 3BB\",\r\n        \"country_code\": \"GB\"\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -766,8 +766,7 @@
 							"variable": [
 								{
 									"key": "carrierCode",
-									"value": "gophr",
-									"description": "(Required) "
+									"value": null
 								}
 							]
 						},
@@ -1432,7 +1431,7 @@
 	],
 	"variable": [
 		{
-			"id": "a482cbdd-6e81-4317-898d-0d6c101bcc16",
+			"id": "2c223809-7938-43b2-82ef-bc0aaa429b88",
 			"key": "baseUrl",
 			"value": "http://connect-rendering-prod.kube.seplocal.com",
 			"type": "string"
